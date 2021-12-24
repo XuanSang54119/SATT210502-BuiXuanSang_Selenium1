@@ -37,7 +37,7 @@ public class TC02 {
         LoginPage loginPage = homePage.gotoLoginPage();
 
         String actualMsg = loginPage.Login("",Constant.PASSWORD).getLoginErrorMsg();
-        String expectedMsg = "There was a problem with your login and/or errors exist in your form";
+        String expectedMsg = "There was a problem with your login and/or errors exist in your form.";
 
         Assert.assertEquals(actualMsg,expectedMsg,"Error msg display as");
     }

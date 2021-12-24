@@ -38,9 +38,7 @@ public class GeneralPage {
 
 
     //Methods
-    public String getWelcomeMessage(){
-        return this.getLblWelcomeMessage().getText();
-    }
+    public String getWelcomeMessage() { return this.getLblWelcomeMessage().getText(); }
 
     public String getLoginErrorMsg(){
         return this.getLblLoginErrorMsg().getText();
