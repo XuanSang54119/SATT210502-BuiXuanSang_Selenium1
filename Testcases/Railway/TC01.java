@@ -41,8 +41,9 @@ public class TC01 {
 
         String actualMsg = loginPage.Login("",Constant.PASSWORD).getLoginErrorMsg();
         String expectedMsg = "Welcome "+ Constant.USERNAME;
+        
 
-        Assert.assertEquals(actualMsg,expectedMsg,"Welcome msg not display as...");
+        Assert.assertEquals(actualMsg,expectedMsg,"Welcome msg not display as");
     }
 
 }
