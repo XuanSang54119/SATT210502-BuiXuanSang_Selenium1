@@ -3,45 +3,42 @@ package PageObjects.Railway;
 import Common.Constant.Constant;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends  GeneralPage{
 
-
     //Locators
-    private final By loc_txtUsername = By.xpath("//input[@id='username']");
-
+    private final By txtUsername = By.id("username");
     private WebElement webElement;
-    private final By loc_txtPassword = By.xpath("//input[@id='password']");
-    private final By loc_btnLogin = By.xpath("//input[@value='login']");
-
-
+    private final By txtPassword = By.id("password");
+    private final By btnLogin = By.xpath("//input[@value='login']");
 
     //Elements
     protected WebElement getTxtUsername() {
-        return Constant.WEBDRIVER.findElement(loc_txtUsername);
+        return Constant.WEBDRIVER.findElement(txtUsername);
     }
-
     protected WebElement getTxtPassword() {
-        return Constant.WEBDRIVER.findElement(loc_txtPassword);
+        return Constant.WEBDRIVER.findElement(txtPassword);
     }
-
     protected WebElement getBtnLogin() {
-        return Constant.WEBDRIVER.findElement(loc_btnLogin);
+        return Constant.WEBDRIVER.findElement(btnLogin);
     }
-
-
-
-
 
     //Methods
-    public HomePage Login(String name, String password){
-        //Submit login
-        this.getTxtUsername().sendKeys(name);
+    public void Login(String username, String password){
+
+        this.getTxtUsername().sendKeys(username);
         this.getTxtPassword().sendKeys(password);
         this.getBtnLogin().click();
+    }
 
-        //land on the Home Page
-        return new HomePage();
+    public void LoginMultipleTimes (String username, String password, int time){
+        PageFactory.initElements(Constant.WEBDRIVER,this);
+        for (int i = 0; i <= time; i++) {
+            this.getTxtUsername().sendKeys(username);
+            this.getTxtPassword().sendKeys(password);
+            this.getBtnLogin().click();
+        }
     }
 
 }
