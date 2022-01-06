@@ -5,13 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage extends  GeneralPage{
+public class LoginPage extends GeneralPage{
 
     //Locators
     private final By txtUsername = By.id("username");
     private WebElement webElement;
     private final By txtPassword = By.id("password");
-    private final By btnLogin = By.xpath("//input[@value='login']");
+    private final By btnLogin = By.xpath("//input[@type='submit' and @title='Login']");
 
     //Elements
     protected WebElement getTxtUsername() {
@@ -38,6 +38,7 @@ public class LoginPage extends  GeneralPage{
             this.getTxtUsername().sendKeys(username);
             this.getTxtPassword().sendKeys(password);
             this.getBtnLogin().click();
+            this.getTxtUsername().clear();
         }
     }
 

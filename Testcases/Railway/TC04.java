@@ -7,6 +7,8 @@ import PageObjects.Railway.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 
 public class TC04 extends TestBase {
 
@@ -29,9 +31,9 @@ public class TC04 extends TestBase {
         loginPage.gotoBookTicketPage();
 
         String actualMsg = bookTicketPage.getBookTicketTitle();
-        String expectedMsg = "Book Ticket";
+        String expectedMsg = "Login page";
 
-        Assert.assertEquals(actualMsg,expectedMsg,"User is redirected to Book ticket page after logging in");
+        Assert.assertEquals(actualMsg,expectedMsg,"User is not redirected to Book ticket page after logging in");
     }
 
 }

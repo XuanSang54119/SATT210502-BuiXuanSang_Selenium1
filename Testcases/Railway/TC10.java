@@ -3,6 +3,7 @@ package Testcases.Railway;
 import Common.Constant.Constant;
 import PageObjects.Railway.HomePage;
 import PageObjects.Railway.RegisterPage;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,9 +13,12 @@ public class TC10 extends TestBase {
     public void Testcase10() {
 
         System.out.println("TC10 - User can't create account with an already in-use email");
-        System.out.println("TPre-condition: Create and activate a new account");
+        System.out.println("Pre-condition: Create and activate a new account");
         HomePage homePage = new HomePage();
         RegisterPage registerPage = new RegisterPage();
+        Constant.WEBDRIVER.manage().window().maximize();
+        JavascriptExecutor jse = (JavascriptExecutor) Constant.WEBDRIVER;
+        jse.executeScript("scroll(0, 250)");
 
         System.out.println("Navigate to QA Railway Website");
         homePage.open();

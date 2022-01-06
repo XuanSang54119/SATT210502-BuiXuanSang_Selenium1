@@ -6,6 +6,7 @@ import PageObjects.Railway.LoginPage;
 import PageObjects.Railway.RegisterPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.openqa.selenium.JavascriptExecutor;
 
 public class TC07 extends TestBase {
 
@@ -15,6 +16,9 @@ public class TC07 extends TestBase {
         System.out.println("TC07 - User can create new account");
         HomePage homePage = new HomePage();
         RegisterPage registerPage = new RegisterPage();
+        Constant.WEBDRIVER.manage().window().maximize();
+        JavascriptExecutor jse = (JavascriptExecutor) Constant.WEBDRIVER;
+        jse.executeScript("scroll(0, 250)");
 
         System.out.println("Navigate to QA Railway Website");
         homePage.open();
@@ -28,6 +32,6 @@ public class TC07 extends TestBase {
         String actualMsg = registerPage.getRegisterMessage();
         String expectedMsg = "Thank you for registering your account";
 
-        Assert.assertEquals(actualMsg,expectedMsg,"New account is created");
+        Assert.assertEquals(actualMsg,expectedMsg,"New account is created, Error message is displayed as");
     }
 }

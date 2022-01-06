@@ -26,9 +26,10 @@ public class TC08 extends TestBase {
         System.out.println("Enter username and password of account hasn't been activated.");
         loginPage.Login("Sang@gmail.com","123456789");
 
+        Assert.assertFalse(homePage.isHomePageTitleDisplayed());
+
         String actualMsg = loginPage.getLoginErrorMsg();
         String expectedMsg = "Invalid username or password. Please try again.";
-
         Assert.assertEquals(actualMsg,expectedMsg,"User cannot login");
     }
 }

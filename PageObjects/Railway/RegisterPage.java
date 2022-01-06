@@ -3,6 +3,8 @@ package PageObjects.Railway;
 import Common.Constant.Constant;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RegisterPage extends GeneralPage {
 
@@ -13,6 +15,8 @@ public class RegisterPage extends GeneralPage {
     private final By txtConfirmPassword = By.id("confirmPassword");
     private final By txtPid = By.id("pid");
     private final By btnRegister = By.xpath("//input[@value='Register']");
+    private final By lblPasswordErrorMessage = By.xpath("//label[@for='password' and @class='validation-error']");
+    private final By lblPIDErrorMessage = By.xpath("//label[@for='pid' and @class='validation-error']");
 
     //Elements
     protected WebElement getTxtEmail() {
@@ -30,15 +34,28 @@ public class RegisterPage extends GeneralPage {
     protected WebElement getBtnRegister() {
         return Constant.WEBDRIVER.findElement(btnRegister);
     }
+    protected WebElement getLblPasswordErrorMessage() { return Constant.WEBDRIVER.findElement(lblPasswordErrorMessage); }
+    protected WebElement getLblPIDErrorMessage() {
+        return Constant.WEBDRIVER.findElement(lblPIDErrorMessage);
+    }
 
     //Methods
-    public void Register(String email, String password, String confirmpassword, String pid){
+    public void Register(String email, String password, String confirmPassword, String pid){
 
         this.getTxtEmail().sendKeys(email);
         this.getTxtPassword().sendKeys(password);
-        this.getTxtConfirmPassword().sendKeys(confirmpassword);
+        this.getTxtConfirmPassword().sendKeys(confirmPassword);
         this.getTxtPid().sendKeys(pid);
-        this.getBtnRegister().click();
+        WebDriverWait wait = new WebDriverWait(Constant.WEBDRIVER, 10);
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(getBtnRegister()));
+        element.click();
+    }
+
+    public String getPasswordErrorMessage() {
+        return getLblPasswordErrorMessage().getText();
+    }
+    public String getPIDErrorMessage() {
+        return getLblPIDErrorMessage().getText();
     }
 
 }

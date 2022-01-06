@@ -30,6 +30,8 @@ public class TC06 extends TestBase {
 
         System.out.println("Click on 'Logout' tab");
         contactPage.gotoLogoutPage();
-    }
 
+        Assert.assertTrue(homePage.isHomePageTitleDisplayed());
+        Assert.assertFalse(homePage.isTabLogoutDisplayed());
+    }
 }

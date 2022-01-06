@@ -27,11 +27,11 @@ public class TC09 extends TestBase {
 
         System.out.println("Click on 'Change Password' tab");
         loginPage.gotoChangePasswordPage();
-        changepasswordPage.ChangePassword(Constant.USERNAME, "Vietnamvodich", "Vietnamkovodich");
+        changepasswordPage.ChangePassword(Constant.USERNAME, "a123:/{}!@$", "b456:/{}!@$");
 
-        String actualMsg = loginPage.getLoginErrorMsg();
+        String actualMsg = changepasswordPage.getChangePasswordErrorMessage();
         String expectedMsg = "Password change failed. Please correct the errors and try again.";
 
-        Assert.assertEquals(actualMsg,expectedMsg,"User cannot login");
+        Assert.assertEquals(actualMsg,expectedMsg,"User cannot login, Error message is displayed as");
     }
 }

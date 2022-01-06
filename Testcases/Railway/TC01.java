@@ -28,7 +28,7 @@ public class TC01 extends TestBase {
         String actualMsg = loginPage.getWelcomeMessage();
         String expectedMsg = "Welcome "+ Constant.USERNAME;
 
-        Assert.assertEquals(actualMsg,expectedMsg,"Welcome msg not display as");
+        Assert.assertEquals(actualMsg,expectedMsg,"Welcome msg is displayed as");
     }
 
 }

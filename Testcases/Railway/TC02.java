@@ -27,7 +27,7 @@ public class TC02 extends TestBase {
         String actualMsg = loginPage.getLoginErrorMsg();
         String expectedMsg = "There was a problem with your login and/or errors exist in your form.";
 
-        Assert.assertEquals(actualMsg,expectedMsg,"Error msg display as");
+        Assert.assertEquals(actualMsg,expectedMsg,"Error msg is displayed as");
     }
 
 }
