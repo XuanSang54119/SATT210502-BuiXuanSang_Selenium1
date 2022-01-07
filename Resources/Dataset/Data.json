@@ -1,34 +1,120 @@
 {
   "TC14": {
-    "departDate": "1/20/2022",
+    "departDate": "1/14/2022",
     "departFrom": "Nha Trang",
     "arriveAt": "Sài Gòn",
     "seatType": "Soft seat with air conditioner",
     "ticketAmount": "2"
   },
   "TC17": {
-    "departDate1": "1/20/2022",
+    "departDate1": "1/14/2022",
     "departFrom1": "Nha Trang",
     "arriveAt1": "Sài Gòn",
     "seatType1": "Soft seat with air conditioner",
     "ticketAmount1": "4",
 
-    "departDate2": "1/20/2022",
+    "departDate2": "1/14/2022",
     "departFrom2": "Nha Trang",
     "arriveAt2": "Sài Gòn",
     "seatType2": "Soft seat with air conditioner",
     "ticketAmount2": "4",
 
-    "departDate3": "1/20/2022",
+    "departDate3": "1/14/2022",
     "departFrom3": "Nha Trang",
     "arriveAt3": "Sài Gòn",
     "seatType3": "Soft seat with air conditioner",
     "ticketAmount3": "2",
 
-    "departDate4": "1/20/2022",
+    "departDate4": "1/14/2022",
     "departFrom4": "Nha Trang",
     "arriveAt4": "Sài Gòn",
     "seatType4": "Soft seat with air conditioner",
     "ticketAmount4": "1"
+  },
+
+  "FTTC201": {
+    "departDate5": "1/14/2022",
+    "departFrom5": "Phan Thiết",
+    "arriveAt5": "Đà Nẵng",
+    "seatType5": "Soft bed with air conditioner",
+    "ticketAmount5": "3"
+  },
+
+  "FTTC202": {
+
+    "departDate2021": "1/14/2022",
+    "departFrom2021": "Sài Gòn",
+    "arriveAt2021": "Đà Nẵng",
+    "seatType2021": "Hard seat",
+    "ticketAmount2021": "1",
+
+    "departDate2022": "1/14/2022",
+    "departFrom2022": "Sài Gòn",
+    "arriveAt2022": "Nha Trang",
+    "seatType2022": "Hard seat",
+    "ticketAmount2022": "1",
+
+    "departDate2023": "1/14/2022",
+    "departFrom2023": "Sài Gòn",
+    "arriveAt2023": "Huế",
+    "seatType2023": "Hard seat",
+    "ticketAmount2023": "1",
+
+    "departDate2024": "1/14/2022",
+    "departFrom2024": "Sài Gòn",
+    "arriveAt2024": "Phan Thiết",
+    "seatType2024": "Hard seat",
+    "ticketAmount2024": "1",
+
+    "departDate2025": "1/14/2022",
+    "departFrom2025": "Sài Gòn",
+    "arriveAt2025": "Quảng Ngãi",
+    "seatType2025": "Hard seat",
+    "ticketAmount2025": "1",
+
+    "departDate2026": "1/14/2022",
+    "departFrom2026": "Phan Thiết",
+    "arriveAt2026": "Nha Trang",
+    "seatType2026": "Hard seat",
+    "ticketAmount2026": "1"
+  },
+
+  "FTTC203": {
+
+    "departDate2031": "1/14/2022",
+    "departFrom2031": "Sài Gòn",
+    "arriveAt2031": "Đà Nẵng",
+    "seatType2031": "Hard seat",
+    "ticketAmount2031": "1",
+
+    "departDate2032": "1/14/2022",
+    "departFrom2032": "Sài Gòn",
+    "arriveAt2032": "Nha Trang",
+    "seatType2032": "Hard seat",
+    "ticketAmount2032": "1",
+
+    "departDate2033": "1/14/2022",
+    "departFrom2033": "Sài Gòn",
+    "arriveAt2033": "Huế",
+    "seatType2033": "Hard seat",
+    "ticketAmount2033": "1",
+
+    "departDate2034": "1/14/2022",
+    "departFrom2034": "Sài Gòn",
+    "arriveAt2034": "Phan Thiết",
+    "seatType2034": "Hard seat",
+    "ticketAmount2034": "1",
+
+    "departDate2035": "1/14/2022",
+    "departFrom2035": "Sài Gòn",
+    "arriveAt2035": "Quảng Ngãi",
+    "seatType2035": "Hard seat",
+    "ticketAmount2035": "1",
+
+    "departDate2036": "1/14/2022",
+    "departFrom2036": "Phan Thiết",
+    "arriveAt2036": "Nha Trang",
+    "seatType2036": "Hard seat",
+    "ticketAmount2036": "1"
   }
 }
