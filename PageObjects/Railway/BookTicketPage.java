@@ -76,8 +76,19 @@ public class BookTicketPage extends  GeneralPage {
     // Method
     public void bookTicket(String departDate, String departFrom, String arriveAt, String seatType, String ticketAmount) {
 
+        JavascriptExecutor jse = (JavascriptExecutor) Constant.WEBDRIVER;
+        Constant.WEBDRIVER.manage().window().maximize();
+        jse.executeScript("scroll(0, 250)");
         Select selectDepartDate = new Select(this.getDdlDepartDate());
         selectDepartDate.selectByVisibleText(departDate);
+
+        try {
+            Select selectArriveAt = new Select(this.getDdlArriveAt());
+            selectArriveAt.selectByVisibleText(arriveAt);
+        } catch (org.openqa.selenium.StaleElementReferenceException ex) {
+            Select selectArriveAt = new Select(this.getDdlArriveAt());
+            selectArriveAt.selectByVisibleText(arriveAt);
+        }
 
         Select selectDepartFrom = new Select(this.getDdlDepartFrom());
         selectDepartFrom.selectByVisibleText(departFrom);
@@ -88,17 +99,6 @@ public class BookTicketPage extends  GeneralPage {
         Select selectTicketAmount = new Select(this.getDdlTicketAmount());
         selectTicketAmount.selectByVisibleText(ticketAmount);
 
-        try {
-            Select selectArriveAt = new Select(this.getDdlArriveAt());
-            selectArriveAt.selectByVisibleText(arriveAt);
-        } catch (org.openqa.selenium.StaleElementReferenceException ex) {
-            Select selectArriveAt = new Select(this.getDdlArriveAt());
-            selectArriveAt.selectByVisibleText(arriveAt);
-        }
-
-        JavascriptExecutor jse = (JavascriptExecutor) Constant.WEBDRIVER;
-        Constant.WEBDRIVER.manage().window().maximize();
-        jse.executeScript("scroll(0, 250)");
         this.getBtnBookTicket().click();
     }
 

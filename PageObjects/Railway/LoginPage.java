@@ -11,7 +11,7 @@ public class LoginPage extends GeneralPage{
     private final By txtUsername = By.id("username");
     private WebElement webElement;
     private final By txtPassword = By.id("password");
-    private final By btnLogin = By.xpath("//input[@type='submit' and @title='Login']");
+    private final By btnLogin = By.xpath("//input[@value='Login']");
 
     //Elements
     protected WebElement getTxtUsername() {

@@ -28,6 +28,7 @@ public class GeneralPage {
     private final By lblRegisterMessage = By.xpath("//div[@id='content']/p");
     private final By lblRegisterErrorMessage = By.xpath("//p[@class='message error']");
     private final By lblChangePasswordErrorMessage = By.xpath("//p[@class='message error']");
+    private final By lblFilterErrorMessage = By.xpath("//div[@class='error message']");
     private final By lblHomePageTitle = By.xpath("//div//h1[@align='center' and text()='Welcome to Safe Railway']");
 
 
@@ -61,6 +62,7 @@ public class GeneralPage {
         return Constant.WEBDRIVER.findElement(lblWelcomeMessage);
     }
     protected WebElement getLblLoginErrorMsg() { return Constant.WEBDRIVER.findElement(lblLoginErrorMsg);}
+    protected WebElement getLblFilterErrorMessage() { return Constant.WEBDRIVER.findElement(lblFilterErrorMessage);}
     protected WebElement getLblBookTicketTitle() { return Constant.WEBDRIVER.findElement(lblBookTicketTitle); }
     protected WebElement getLblRegisterMessage() { return Constant.WEBDRIVER.findElement(lblRegisterMessage); }
     protected WebElement getLblChangePasswordErrorMessage() { return Constant.WEBDRIVER.findElement(lblChangePasswordErrorMessage); }
@@ -74,6 +76,7 @@ public class GeneralPage {
     public String getRegisterMessage() {return this.getLblRegisterMessage().getText(); }
     public String getChangePasswordErrorMessage() {return this.getLblChangePasswordErrorMessage().getText(); }
     public String getRegisterErrorMessage() {return this.getLblRegisterErrorMessage().getText(); }
+    public String getFilterErrorMessage() {return this.getLblFilterErrorMessage().getText(); }
     public String getHomePageTitle() {return this.getLblHomePageTitle().getText(); }
 
 
@@ -109,9 +112,7 @@ public class GeneralPage {
 
     public void gotoMyTicketPage() { this.getTabMyTicket().click(); }
 
-    public boolean isHomePageTitleDisplayed() {
-        return this.getLblHomePageTitle().isDisplayed();
-    }
+    public boolean isHomePageTitleDisplayed() { return this.getLblHomePageTitle().isDisplayed(); }
 
     public boolean isTabLogoutDisplayed()
     {

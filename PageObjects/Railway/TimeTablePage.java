@@ -19,11 +19,11 @@ public class TimeTablePage extends GeneralPage {
     private final By txtTableHeader = By.xpath("//tr[@class='TableSmallHeader']//th");
 
     //Dynamic locators
-    String checkPriceLink = "//td[text()='%s']/following-sibling::td[text()='%s']/../td/a[text()='check price']";
+    String linkCheckPrice = "//td[text()='%s']/following-sibling::td[text()='%s']/../td/a[text()='check price']";
 
     //Elements
-    protected WebElement getLnkCheckPrice(String depart, String arrive) {
-        return Constant.WEBDRIVER.findElement(By.xpath(String.format(checkPriceLink, depart, arrive)));
+    protected WebElement getLinkCheckPrice(String depart, String arrive) {
+        return Constant.WEBDRIVER.findElement(By.xpath(String.format(linkCheckPrice, depart, arrive)));
     }
 
     protected WebElement getTxtTableHeader() {
@@ -49,10 +49,10 @@ public class TimeTablePage extends GeneralPage {
     }
 
     //Methods
-    public void CheckPrice(String depart, String arrive) {
+    public void clickLinkCheckPrice(String depart, String arrive) {
         WebDriverWait wait = new WebDriverWait(Constant.WEBDRIVER, 10);
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(getLnkCheckPrice(depart, arrive)));
-        this.getLnkCheckPrice(depart, arrive).click();
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(getLinkCheckPrice(depart, arrive)));
+        this.getLinkCheckPrice(depart, arrive).click();
     }
 
     public String getHSPrice() {
